@@ -1,0 +1,11 @@
+# need to run CMD argument --spring.config.additional-location=classpath:/config/logging.yaml
+
+logging:
+  group:
+    tomcat: org.apache.catalina, org.apache.tomcat
+  level:
+    org.springframework: INFO
+    tomcat: DEBUG
+  path: ./target
+  file:
+    max-history: 10

@@ -1,0 +1,10 @@
+property:
+  static: "Hello as property"
+  dynamic: ${random.uuid}
+  date: "2019-12-11"
+  validatedNumber: 3
+
+spring:
+  profiles:
+    active:
+      - production #development or production

@@ -1,0 +1,16 @@
+property:
+  static: "Custom property"
+# overrides from other application yaml
+---
+spring:
+  profiles: development
+property:
+  servers:
+    - 127.0.0.1
+    - 192.168.0.1
+---
+spring:
+  profiles: production
+property:
+  servers:
+    - 88.84.59.125
