@@ -1,2 +1,7 @@
 property:
   profileName: "Development"
+spring:
+  security:
+    user:
+      name: "admin"
+      password: "admin"

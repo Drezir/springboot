@@ -1,5 +1,7 @@
 package springboot.configuration;
 
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -11,6 +13,14 @@ public class ExampleConfiguration {
   @Bean("person1")
   public Person createPerson() {
     return new Person("Adam", "Ostrožlík");
+  }
+
+  @Bean
+  public ConfigurableServletWebServerFactory webServerFactory() {
+    TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+    factory.setPort(8080);
+    factory.setContextPath("/adam");
+    return factory;
   }
 
 

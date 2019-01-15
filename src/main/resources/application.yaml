@@ -7,4 +7,4 @@ property:
 spring:
   profiles:
     active:
-      - production #development or production
+      - development #development or production

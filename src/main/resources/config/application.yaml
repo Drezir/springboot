@@ -1,6 +1,7 @@
 property:
   static: "Custom property"
 # overrides from other application yaml
+
 ---
 spring:
   profiles: development

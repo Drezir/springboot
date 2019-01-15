@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import springboot.configuration.ExampleConfiguration.Person;
 import springboot.properties.BeanMapProperty.ServersBean;
 
 @SpringBootApplication
+@ServletComponentScan // for web filters, ...
 public class SpringExample {
 
   private static final Logger LOG = LoggerFactory.getLogger(SpringExample.class);
