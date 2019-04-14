@@ -5,3 +5,7 @@ spring:
     user:
       name: "admin"
       password: "admin"
+
+  h2:
+    console:
+      enabled=true

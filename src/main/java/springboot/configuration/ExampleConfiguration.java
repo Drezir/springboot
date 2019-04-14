@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("classpath:config/logging.yaml")
+@PropertySource("classpath:config/logging.yml")
 public class ExampleConfiguration {
 
   @Bean("person1")
