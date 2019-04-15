@@ -29,7 +29,7 @@ public class DatabaseInitializer implements ApplicationListener<ApplicationReady
     pepper.setName("Pepper");
 
     Description description = new Description();
-    description.setDescription("Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla");
+    description.setDescription("bla");
 
     Recipe recipe = new Recipe();
     recipe.setDescription(description);
