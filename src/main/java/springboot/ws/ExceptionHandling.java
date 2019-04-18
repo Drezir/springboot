@@ -20,8 +20,8 @@ public class ExceptionHandling {
   }
 
   @ExceptionHandler(MyException.class)
-  public String handleException() {
-    return "<H1>Error</h1>";
+  public String handleException(Exception exception) {
+    return "<H1>Error</h1>" + exception.getLocalizedMessage();
   }
 
   @ResponseStatus(HttpStatus.NOT_FOUND)
