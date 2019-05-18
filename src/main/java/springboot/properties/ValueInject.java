@@ -21,7 +21,7 @@ public class ValueInject {
   @Value("${property.dynamic}")
   private String uuid;
 
-  @Value("${ext.property}")
+  @Value("${ext.property:20}")
   private int cmdProperty;
 
   @Value("${property.profileName}")
