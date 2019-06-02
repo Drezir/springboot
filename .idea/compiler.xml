@@ -6,16 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="security" />
         <module name="springadmin" />
         <module name="basics" />
+        <module name="full-stack-react" />
+        <module name="ppmtool" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="full-stack-react" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="basics" options="-parameters" />
-      <module name="security" options="-parameters" />
+      <module name="full-stack-react" options="-parameters" />
+      <module name="ppmtool" options="-parameters" />
       <module name="springadmin" options="-parameters" />
     </option>
   </component>

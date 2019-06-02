@@ -25,7 +25,7 @@
   <modules>
     <module>springadmin</module>
     <module>basics</module>
-    <module>security</module>
+    <module>full-stack-react</module>
   </modules>
 
   <dependencies>
