@@ -25,6 +25,7 @@
   <modules>
     <module>springadmin</module>
     <module>basics</module>
+    <module>security</module>
   </modules>
 
   <dependencies>

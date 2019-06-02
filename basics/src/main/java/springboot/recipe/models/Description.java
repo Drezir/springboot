@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import lombok.Data;
 
@@ -20,5 +21,10 @@ public class Description {
 
   @Lob
   private String description;
+
+  @PrePersist
+  public void doSomething() {
+    System.out.println("Prepersist of description");
+  }
 
 }
