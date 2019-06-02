@@ -7,11 +7,13 @@
   <groupId>com.adamostrozlik</groupId>
   <artifactId>springboot</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
   <properties>
     <HikariCP.version>3.3.0</HikariCP.version>
     <lombok.version>1.18.6</lombok.version>
     <spring-boot-admin-starter-client.version>2.1.5</spring-boot-admin-starter-client.version>
+    <jaxb2-maven-plugin.version>2.4</jaxb2-maven-plugin.version>
   </properties>
 
   <parent>
@@ -19,6 +21,11 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.1.4.RELEASE</version>
   </parent>
+
+  <modules>
+    <module>springadmin</module>
+    <module>basics</module>
+  </modules>
 
   <dependencies>
     <dependency>
@@ -70,6 +77,14 @@
       <artifactId>spring-boot-admin-starter-client</artifactId>
       <version>${spring-boot-admin-starter-client.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web-services</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>wsdl4j</groupId>
+      <artifactId>wsdl4j</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
@@ -103,6 +118,27 @@
           <excludes>
             <exclude>**/*IT.java</exclude>
           </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxb2-maven-plugin</artifactId>
+        <version>${jaxb2-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>xjc</id>
+            <goals>
+              <goal>xjc</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <sources>
+            <source>${project.basedir}/src/main/resources/xsd</source>
+          </sources>
+          <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+          <packageName>springboot.ws.soap.generated</packageName>
+          <clearOutputDir>false</clearOutputDir>
         </configuration>
       </plugin>
     </plugins>
