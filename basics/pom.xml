@@ -26,7 +26,7 @@
     </dependency>
   </dependencies>
   <properties>
-    <spring-boot-admin-server.version>2.1.5</spring-boot-admin-server.version>
+    <spring-boot-admin-server.version>3.1.2</spring-boot-admin-server.version>
   </properties>
 
 </project>
